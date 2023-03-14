@@ -1,0 +1,22 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 50px;
+}
+
+.image-container {
+  margin-top: 50px;
+  display: none;
+}
+
+.timer-container {
+  margin-top: 50px;
+  display: none;
+}
+
+#timer {
+  font-weight: bold;
+}
