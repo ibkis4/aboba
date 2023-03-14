@@ -1,7 +1,7 @@
 // Создаем массив изображений
 const images = [];
 const imgcount= 14
-for (let i = 1; i <= 14; i++) {
+for (let i = 1; i <= imgcount; i++) {
   images.push(`img/${i}.jpeg`);
 }
 
