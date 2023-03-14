@@ -40,7 +40,7 @@ function showImage() {
       clearInterval(countdown);
       randomImage.parentElement.style.display = 'none';
       // Запускаем таймер на 3 секунды
-      let delay = 10;
+      let delay = 120;
       const delayTimer = setInterval(() => {
         delay--;
         timerDisplay.textContent = delay;
