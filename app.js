@@ -22,36 +22,45 @@ function showImage() {
   const randomIndex = getRandomNumber(0, images.length - 1);
   const randomImagePath = images[randomIndex];
   randomImage.src = randomImagePath;
-  
+  showImageButton.classList.add('centered-button');
+
   // Показываем изображение
   randomImage.parentElement.style.display = 'block';
   
-  // Скрываем кнопку
- // showImageButton.style.display = 'none';
+  showImageButton.style.display = 'none';
   
-  // Запускаем таймер на 5 секунд
-  let timeLeft = 20;
+  // Запускаем первый таймер на 5 секунд
+  let timeLeft = 1;
+  let delay = 1;
   timerContainer.style.display = 'block';
   timerDisplay.textContent = timeLeft;
-  const countdown = setInterval(() => {
-    timeLeft--;
-    timerDisplay.textContent = timeLeft;
-    if (timeLeft === 0) {
-      clearInterval(countdown);
+  const countdown = setInterval(() => {    
+    if (timeLeft > 0){
+      
+      timeLeft--;
+      timerDisplay.textContent = timeLeft;
+    }
+    console.log('time left' + timeLeft);
+  if (timeLeft === 0) {
+    clearInterval(countdown);
+    
+     // clearInterval(countdown);
       randomImage.parentElement.style.display = 'none';
-      // Запускаем таймер на 3 секунды
-      let delay = 120;
+      // Запускаем второй таймер на 3 секунды
       const delayTimer = setInterval(() => {
+        console.log('delay' + delay);
         delay--;
         timerDisplay.textContent = delay;
-        if (delay === 0) {
+        if (delay == 0) {
           clearInterval(delayTimer);
           randomImage.parentElement.style.display = 'block';
+          showImageButton.style.display = 'block';
           
         }
       }, 1000);
-    }
+    } 
   }, 1000);
+  
 }
 
 // Добавляем обработчик события на кнопку
