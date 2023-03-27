@@ -17,6 +17,11 @@ h1 {
   display: none;
 }
 
+.centered-button {
+  display: block;
+  margin: 0 auto;
+}
+
 #timer {
   font-weight: bold;
 }
