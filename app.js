@@ -29,9 +29,9 @@ function showImage() {
   
   showImageButton.style.display = 'none';
   
-  // Запускаем первый таймер на 5 секунд
-  let timeLeft = 1;
-  let delay = 1;
+  // Запускаем первый таймер на 20 секунд
+  let timeLeft = 20;
+  let delay = 120;
   timerContainer.style.display = 'block';
   timerDisplay.textContent = timeLeft;
   const countdown = setInterval(() => {    
@@ -46,7 +46,7 @@ function showImage() {
     
      // clearInterval(countdown);
       randomImage.parentElement.style.display = 'none';
-      // Запускаем второй таймер на 3 секунды
+      // Запускаем второй таймер на 2 минуты
       const delayTimer = setInterval(() => {
         console.log('delay' + delay);
         delay--;
